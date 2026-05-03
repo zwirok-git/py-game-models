@@ -7,7 +7,7 @@ class Race(models.Model):
 
 
 class Skill(models.Model):
-    nickname = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=255, unique=True)
     bonus = models.CharField(max_length=255)
     race = models.ForeignKey(
         Race,
@@ -22,7 +22,7 @@ class Guild(models.Model):
 
 
 class Player(models.Model):
-    name = models.CharField(max_length=255, unique=True)
+    nickname = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255)
     bio = models.CharField(max_length=255)
     race = models.ForeignKey(
